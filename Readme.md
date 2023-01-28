@@ -8,7 +8,7 @@ A Flask Boilerplate for quick development which uses pyngrok for exposing the lo
 pip install -r requirements.txt
 ```
 - Create a ngrok account and get the authtoken from [here](https://dashboard.ngrok.com/get-started/your-authtoken)
-- Add the authtoken to the ngrok.yml file
+- Add the authtoken to your ngrok config
 ```bash
 ngrok config add-authtoken TOKEN
 ```
