@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
 
 from flask import Flask
+from application.database import session
 
 def init_webhooks(base_url):
     # Update inbound traffic via APIs to use the public-facing ngrok URL
@@ -34,16 +35,20 @@ def create_app():
         app.config["BASE_URL"] = public_url
         init_webhooks(public_url)
 
+    # Initialize SQLAlchemy
+    app.session = session
+
     # ... Initialize Blueprints and the rest of our app
 
+    from application.views import Users
+    # AttributeError: 'function' object has no attribute 'register'
+    app.register_blueprint(Users, url_prefix="/users")
+
     return app
-
-app = create_app()
-
-#.. your routes
 
 
 
 
 if __name__ == "__main__":
+    app = create_app()
     app.run(debug=True)
