@@ -19,9 +19,8 @@ python app.py
 ```
 
 ## Usage
-1. Open the ngrok dashboard in the browser (you can get the url from the terminal)
-2. Copy the ngrok url and paste it in the browser
-3. You can also use the ngrok url in your mobile app
+1. Copy the ngrok url and paste it in the browser (you can get the url from the terminal)
+2. You can also use the ngrok url in your mobile app
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
