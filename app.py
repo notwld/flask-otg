@@ -41,7 +41,6 @@ def create_app():
     # ... Initialize Blueprints and the rest of our app
 
     from application.views import Users
-    # AttributeError: 'function' object has no attribute 'register'
     app.register_blueprint(Users, url_prefix="/users")
 
     return app
